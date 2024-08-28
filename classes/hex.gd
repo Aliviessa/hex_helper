@@ -2,14 +2,17 @@ class_name Hex
 extends Object
 
 ## This is a helper class for games/applications that use a hex based grid. 
-
-## This is based on the methods described at redblobgames (https://www.redblobgames.com/grids/hexagons).
+## 
+## This is based on the methods described at redblobgames ([url]https://www.redblobgames.com/grids/hexagons[/url]).
+## [br][br]
+## Some methods are functionally the same as a simple Vector addition/subtraction. They are kept in the class for informational purposes and readability of certain functions.
+## The class is intentionally unoptimized, as it helped me in the learning process to have things as expressive as possible.
 
 enum DIR { SOUTHWEST, SOUTH, SOUTHEAST, NORTHEAST, NORTH, NORTHWEST }
 
 enum COORD_SYSTEM { AXIAL, CUBE, ODDQ}
 
-## This maps 1:1 to [member DIR]. Allows for better readability by using 'DIR.SOUTH' instead of '1' when using AXIAL_DIRECTION.
+## This maps 1:1 to [member DIR] (SW,S,SE,NE,N,NW). Allows for better readability by using 'DIR.SOUTH' instead of '1' when using AXIAL_DIRECTION.
 static var AXIAL_DIRECTION : Array = [Vector2i(-1, 1),Vector2i(0, 1), Vector2i(1, 0), Vector2i(1, -1), Vector2i(0, -1), Vector2i(-1, 0)] # SW,S,SE,NE,N,NW
 
 
